@@ -1,0 +1,208 @@
+:root {
+  --primary-border-style: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 8px;
+  background: #3d84ff14;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #091e4241;
+  border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.board {
+  position: relative;
+  top: 5px;
+  /* left: 15px; */
+  display: flex;
+  flex-flow: row nowrap;
+  flex-basis: 1;
+  flex-grow: 1;
+  height: 98vh;
+  width: 100%;
+  padding: 5px;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: fit-content;
+  max-height: 100%;
+  min-width: 275px;
+  max-width: 275px;
+  margin: 0 15px;
+  /* overflow-y: auto; */
+  border: var(--primary-border-style);
+  border-radius: 2.5px;
+  background: #f9f9f9;
+}
+
+.list-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.list-header {
+  padding: 4px 8px 4px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 36px;
+  height: fit-content;
+  width: 100%;
+}
+
+.remove-list {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  line-height: 24px;
+  padding: 6px;
+  text-align: center;
+}
+
+.remove-list:hover {
+  background: #f5f5f5;
+  border-radius: 3px;
+}
+
+.list-cards {
+  overflow-y: auto;
+  height: fit-content;
+  flex-grow: 2;
+  padding-top: 15px;
+  width: 100%;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border: var(--primary-border-style);
+  border-radius: 2px;
+  padding: 6px 8px;
+  min-height: 30px;
+  /* width: 95%; */
+  margin: 10px 5px;
+  height: fit-content;
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+.card:hover {
+  background: #f6f6f6;
+}
+
+.dragged {
+  border: none;
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0);
+}
+
+/* Card adding section */
+.list-add-card {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 110px; */
+  height: fit-content;
+  width: 100%;
+}
+
+#list-add-card-btn {
+  background: #fff;
+  border: none;
+  height: 40px;
+  width: 95%;
+  align-self: center;
+  text-align: start;
+  padding-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#list-add-card-btn:hover {
+  background: #f5f5f5;
+}
+
+.list-add-card-input {
+  resize: none;
+  width: calc(100% - 16px);
+  align-self: stretch;
+  min-height: 60px;
+  height: fit-content;
+  border: var(--primary-border-style);
+  border-radius: 2px;
+  padding: 0 8px;
+  margin: 0 5px;
+}
+
+.list-add-card-input:focus {
+  outline: none;
+}
+
+.card-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px 0 6px;
+  align-self: flex-start;
+  margin: 6px 0;
+}
+
+.add-card-btn,
+.cancel-btn {
+  border: var(--primary-border-style);
+  border-radius: 2px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.add-card-btn {
+  background: #3c00ff;
+  color: #fff;
+}
+
+.cancel-btn {
+  margin-left: auto;
+  background: #ff0000;
+  color: #fff;
+}
+
+.add-card-btn,
+.cancel-btn,
+.list-add-card-input {
+  display: none;
+}
+
+.add-list {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background: #f0f0f0;
+  height: 35px;
+  width: 275px;
+  padding-left: 15px;
+  line-height: 30px;
+}
+
+.add-list:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.plus {
+  font-size: 24px;
+  font-weight: 600;
+}
